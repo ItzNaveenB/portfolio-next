@@ -13,9 +13,9 @@ const HomePage = ()=>{
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTextIndex(prevIndex => (prevIndex + 1) % texts.length);
-    }, 1000); // Change text every 1 second
+    }, 1000); 
 
-    return () => clearInterval(interval); // Cleanup on unmount
+    return () => clearInterval(interval); 
   }, []);
     return(
         <div className="mt-[15rem] mx-[6rem] flex justify-between items-center">
@@ -25,7 +25,7 @@ const HomePage = ()=>{
                 <p>Berlin, Germany • GMT +2</p>
             </div>
             <div>
-            <img className="w-[12rem] rounded-full mr-[4rem]" src="https://static.vecteezy.com/system/resources/thumbnails/005/346/410/small_2x/close-up-portrait-of-smiling-handsome-young-caucasian-man-face-looking-at-camera-on-isolated-light-gray-studio-background-photo.jpg" alt="User Image" />
+            <img className="w-[12rem] rounded-full mr-[4rem]" src="../me.webp" alt="User Image" />
           </div>
         </div>
     )
