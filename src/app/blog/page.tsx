@@ -28,7 +28,7 @@ const BlogPage = ()=>{
 
                         </div>
                         <div className="hover:ml-3">
-                            <h1 className="text-xl font-bold">The Git Commands You'll Ever Need</h1>
+                            <h1 className="text-xl font-bold">The Git Commands You&apos;ll Ever Need</h1>
                             <p>Say goodbye to Git confusion and hello to a smoother development experience. Become a 10x developer at work.</p>
                         </div>
                     </div>
@@ -47,7 +47,7 @@ const BlogPage = ()=>{
 
                         </div>
                         <div className="hover:ml-3">
-                            <h1 className="text-xl font-bold">The Git Commands You'll Ever Need</h1>
+                            <h1 className="text-xl font-bold">The Git Commands You&apos;ll Ever Need</h1>
                             <p>My journey from open-source contributor to a core team member at gitlab.</p>
                         </div>
                     </div>

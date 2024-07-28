@@ -15,7 +15,7 @@ const Footer = () => {
            <SiMinutemailer /> Join Our Newsletter
           </h2>
           <p className="text-gray-600">
-            "I thought the blog was good. But the newsletter? Even better!"
+          &quot;I thought the blog was good. But the newsletter? Even better!&quot;
           </p>
         </div>
         <div>

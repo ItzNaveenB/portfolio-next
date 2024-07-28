@@ -20,7 +20,7 @@ const HomePage = ()=>{
     return(
         <div className="mt-[15rem] mx-[6rem] flex justify-between items-center">
             <div className="w-[60%]">
-                <h1 className=" text-4xl font-extrabold">I'm Shubham, a Backend Engineer and an open-source contributor at</h1>
+                <h1 className=" text-4xl font-extrabold">I&apos;m Shubham, a Backend Engineer and an open-source contributor at</h1>
                 <h1 className="text-3xl font-bold my-4" style={{ color: colors[currentTextIndex] }}>{texts[currentTextIndex]}</h1>
                 <p>Berlin, Germany • GMT +2</p>
             </div>

@@ -11,7 +11,7 @@ const GuestBook = () =>{
           <hr></hr>
           <div className="w-[56%] border border-gray-500 rounded  mt-20 p-6 ml-[25%] bg-custom-green-gradient ">
             <span className="flex items-center gap-2 font-semibold"><TbPinned />Pinned</span>
-            <p>Hey there! Thanks for visiting my website. If you have a moment, I'd love to hear your thoughts on my work. Please log in with your account to leave a comment. Thanks!</p>
+            <p>Hey there! Thanks for visiting my website. If you have a moment, I&apos;d love to hear your thoughts on my work. Please log in with your account to leave a comment. Thanks!</p>
           </div>
           <button className="py-1 px-2 rounded bg-custom-orange-gradient mr-3 ml-[25%] mt-[5rem]">Login</button>
           <span>to continue leaving a message</span>

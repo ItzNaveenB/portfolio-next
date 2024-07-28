@@ -8,9 +8,9 @@ const AboutPage = ()=>{
         <p className="mt-4 text-gray-500 text-base mb-8">👋 Hi there! I am Shubham. A backend engineer and an open sourcerer.</p>
         <hr></hr>
         <div className="mt-16">
-            <p className="mb-8">I'm a Backend Engineer based in Berlin, Germany, having relocated here in 2023. Originally from India, I completed my bachelor's degree in computer science & engineering in 2022. My journey into the world of software engineering began in 2019, driven by a passion for contributing to open-source projects.</p>
+            <p className="mb-8">I&apos;m a Backend Engineer based in Berlin, Germany, having relocated here in 2023. Originally from India, I completed my bachelor&apos;s degree in computer science & engineering in 2022. My journey into the world of software engineering began in 2019, driven by a passion for contributing to open-source projects.</p>
             <p className="mb-8">
-            I've had the privilege of working with prestigious organizations like <a className="font-bold" href="mozila.com">Mozila</a> and <a className="font-bold"href="gitlab.com">Gitlab</a> through the<a className="font-bold"href="Google.com"> Google Summer of Code</a>programs. At Mozilla, I participated in the 2020 edition, and the following year, I joined GitLab, where I continued to expand my skills and knowledge.
+            I&apos;ve had the privilege of working with prestigious organizations like <a className="font-bold" href="mozila.com">Mozila</a> and <a className="font-bold"href="gitlab.com">Gitlab</a> through the<a className="font-bold"href="Google.com"> Google Summer of Code</a>programs. At Mozilla, I participated in the 2020 edition, and the following year, I joined GitLab, where I continued to expand my skills and knowledge.
             </p>
             <p className="mb-4">Currently, I am a Backend Engineer at GitLab in the Tenant Scale team.</p>
             <p className="mb-4">Before joining GitLab, my open-source contributions as a community contributor:</p>
