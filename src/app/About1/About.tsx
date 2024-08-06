@@ -62,7 +62,7 @@ const About = () => {
             className="p-8 rounded-full"
             src="/earth.png"
             alt="User Image"
-            layout="responsive"
+            // layout="responsive"
             width={200}
             height={200}
           />
