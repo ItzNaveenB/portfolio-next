@@ -1,5 +1,5 @@
-"use client"
-import React from "react";
+"use client";
+import React, { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaLink, FaGithub, FaGitlab, FaYoutube, FaLinkedin, FaRegHeart, FaServicestack } from "react-icons/fa";
@@ -7,16 +7,7 @@ import { MdLocationOn } from "react-icons/md";
 import { RiTwitterXLine } from "react-icons/ri";
 import { FiClock } from "react-icons/fi";
 import { SiRubyonrails } from "react-icons/si";
-import { useRef } from "react";
-import {
-  motion,
-  useScroll,
-  useSpring,
-  useTransform,
-  useMotionValue,
-  useVelocity,
-  useAnimationFrame,
-} from "framer-motion";
+import { motion, useScroll, useSpring, useTransform, useMotionValue, useVelocity, useAnimationFrame } from "framer-motion";
 import { wrap } from "@motionone/utils";
 
 interface ParallaxProps {
@@ -37,17 +28,11 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
   });
 
   const x = useTransform(baseX, (v) => `${wrap(-20, -45, v)}%`);
-
   const directionFactor = useRef<number>(1);
+
   useAnimationFrame((t, delta) => {
     let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
-
-    if (velocityFactor.get() < 0) {
-      directionFactor.current = -1;
-    } else if (velocityFactor.get() > 0) {
-      directionFactor.current = 1;
-    }
-
+    directionFactor.current = velocityFactor.get() < 0 ? -1 : 1;
     moveBy += directionFactor.current * moveBy * velocityFactor.get();
     baseX.set(baseX.get() + moveBy);
   });
@@ -69,7 +54,7 @@ const About = () => {
     <div className="mx-4 md:mx-[9rem]">
       <h1 className="text-center text-3xl font-bold my-5">About me</h1>
       <div className="flex flex-col md:flex-row justify-between gap-4 md:gap-3">
-        <div className="md:w-1/2 shadow-md rounded shadow-gray-800">
+        <div className="md:w-1/2 shadow-md rounded-lg shadow-gray-800">
           <span className="flex items-center gap-4 p-4">
             <MdLocationOn /> Berlin, Germany
           </span>
@@ -82,7 +67,7 @@ const About = () => {
             height={200}
           />
         </div>
-        <div className="md:w-1/2 shadow-md rounded shadow-gray-800 text-gray-500">
+        <div className="md:w-1/2 shadow-md rounded-lg shadow-gray-800 text-gray-500">
           <div className="flex gap-2 items-center text-2xl px-4 my-3 hover:text-black">
             <FaLink />
             <span>Connect</span>
@@ -90,30 +75,40 @@ const About = () => {
           <Link
             className="flex gap-2 items-center text-2xl px-6 my-3 hover:text-black"
             href="/github"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <FaGithub /> <span>Github</span>
           </Link>
           <Link
             className="flex gap-2 items-center text-2xl px-6 my-3 hover:text-black"
             href="/gitlab"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <FaGitlab /> <span>Gitlab</span>
           </Link>
           <Link
             className="flex gap-2 items-center text-2xl px-6 my-3 hover:text-black"
             href="/twitter"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <RiTwitterXLine /> <span>X</span>
           </Link>
           <Link
             className="flex gap-2 items-center text-2xl px-6 my-3 hover:text-black"
             href="/linkedin"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <FaLinkedin /> <span>Linkedin</span>
           </Link>
           <Link
             className="flex gap-2 items-center text-2xl px-6 my-3 hover:text-black"
             href="/youtube"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <FaYoutube /> <span>Youtube</span>
           </Link>
@@ -122,18 +117,18 @@ const About = () => {
 
       {/* 2nd container */}
       <div className="flex flex-col md:flex-row mt-7 gap-4">
-        <div className="md:w-1/2 md:h-[8rem] shadow-md rounded shadow-gray-800 p-4">
+        <div className="md:w-1/2 md:h-[8rem] shadow-md rounded-lg shadow-gray-800 p-4">
           <ParallaxText baseVelocity={-5}>Framer Motion</ParallaxText>
           <ParallaxText baseVelocity={5}>Scroll velocity</ParallaxText>
         </div>
         <div className="flex flex-col md:flex-row gap-4 md:gap-6 md:w-1/2">
-          <div className="w-full md:w-1/2 shadow-md rounded shadow-gray-800 p-4">
+          <div className="w-full md:w-1/2 shadow-md rounded-lg shadow-gray-800 p-4">
             <span className="flex items-center gap-2">
               <FiClock /> Coding hours
             </span>
             <p className="text-center text-4xl font-extrabold mt-12">57 hrs</p>
           </div>
-          <div className="w-full md:w-1/2 shadow-md rounded shadow-gray-800 p-4">
+          <div className="w-full md:w-1/2 shadow-md rounded-lg shadow-gray-800 p-4">
             <span className="flex items-center gap-4">
               <FaRegHeart /> Fav. framework
             </span>
