@@ -2,7 +2,7 @@ import Image from "next/image";
 import About from "./About1/About";
 import Artcles from "./Articles/Artcles";
 import HomePage from "./home/page";
-import Questions from "@/Questions";
+import Questions from "@/Questions/Questions";
 
 export default function Home() {
   return (
@@ -10,7 +10,7 @@ export default function Home() {
       <HomePage />
       <About />
       <Artcles />
-      <Questions />
+      <Questions /> 
     </main>
   );
 }

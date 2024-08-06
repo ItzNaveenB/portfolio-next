@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss"
 
-const config = {
+const config: Config = {
   darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
@@ -18,12 +18,21 @@ const config = {
       },
     },
     extend: {
+      backdropFilter: {
+        'none': 'none',
+        'blur': 'blur(14.1px)',
+      },
+      boxShadow: {
+        'custom': '0 4px 30px rgba(0, 0, 0, 0.1)',
+      },
+      borderColor: {
+        'custom': 'rgba(255, 255, 255, 0.75)',
+      },
       backgroundImage: {
         "custom-gradient": "linear-gradient(to right, #1565C0, #b92b27)",
         "custom-green-gradient": "linear-gradient(to right, #38ef7d, #11998e)",
         "custom-orange-gradient": "linear-gradient(to right, #f5af19, #f12711)",
-        "custom-main-gradient":
-          "linear-gradient(to right, #f7797d, #FBD786, #C6FFDD)",
+        "custom-main-gradient": "linear-gradient(to right, #f7797d, #FBD786, #C6FFDD)",
       },
       backdropBlur: {
         xs: "2px",
@@ -34,7 +43,6 @@ const config = {
         "2xl": "24px",
         "3xl": "40px",
       },
-
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -100,6 +108,6 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config;
+};
 
-export default config
+export default config;

@@ -1,56 +1,64 @@
-import React from "react";
+'use client';
+import React, { useState } from "react";
 import { ModeToggle } from "./ModeToggle";
 import { Button } from "@/components/ui/button";
-import { MdKeyboardCommandKey } from "react-icons/md";
+import { MdKeyboardCommandKey, MdMenu, MdClose } from "react-icons/md";
 import { CiSearch } from "react-icons/ci";
 import { PiSignInBold } from "react-icons/pi";
 import { FaLink, FaGithub, FaYoutube } from "react-icons/fa";
 import { FaGitlab } from "react-icons/fa6";
 import { IoCode } from "react-icons/io5";
 import { RiTwitterXLine } from "react-icons/ri";
+import Link from "next/link";
+import './Navbar.css';
+
 import {
     Dialog,
     DialogContent,
-    DialogDescription,
     DialogHeader,
-    DialogTitle,
     DialogTrigger,
     DialogFooter,
 } from "@/components/ui/dialog";
 
 const Navbar = () => {
+    const [menuOpen, setMenuOpen] = useState(false);
+
     return (
-        <footer className="relative">
-            <div className="fixed inset-x-0 top-4 z-100 mx-auto flex h-[60px] max-w-5xl items-center justify-between rounded-2xl px-8 shadow-lg shadow-gray-500/50 blurred-background">
-                <a className="flex items-center justify-center gap-1" href="/">S</a>
+        <header>
+            <div className="z-0">
+                <img src="https://shubham-kumar.com/_next/image?url=%2Fimages%2Fgradient-background-top.png&w=3840&q=75" alt="top_gradient" />
+            </div>
+            <div className="fixed inset-x-0 top-4 z-100 mx-auto flex h-[60px] max-w-5xl items-center justify-between rounded-2xl px-7 custom-shadow custom-backdrop custom-border">
+                <Link className="flex items-center justify-center gap-1" href="/">S</Link>
                 <div className="flex items-center gap-2">
-                    <ul className="hidden gap-2 md:flex">
+                    <ul className="hidden md:flex gap-2">
                         <li className="relative flex h-[60px] items-center justify-center">
-                            <a href="/blog" className="rounded px-3 py-2 text-sm font-medium transition-colors text-muted-foreground hover:text-foreground">Blog</a>
+                            <Link href="/blog" className="rounded px-3 py-2 text-sm font-medium transition-colors text-muted-foreground hover:text-foreground">Blog</Link>
                         </li>
                         <li className="relative flex h-[60px] items-center justify-center">
-                            <a className="rounded px-3 py-2 text-sm font-medium transition-colors text-muted-foreground hover:text-foreground" href="/guestbook">Guestbook</a>
+                            <Link className="rounded px-3 py-2 text-sm font-medium transition-colors text-muted-foreground hover:text-foreground" href="/guestbook">Guestbook</Link>
                         </li>
                         <li className="relative flex h-[60px] items-center justify-center">
-                            <a className="rounded px-3 py-2 text-sm font-medium transition-colors text-muted-foreground hover:text-foreground" href="/dashboard">Dashboard</a>
+                            <Link className="rounded px-3 py-2 text-sm font-medium transition-colors text-muted-foreground hover:text-foreground" href="/dashboard">Dashboard</Link>
                         </li>
                         <li className="relative flex h-[60px] items-center justify-center">
-                            <a className="rounded px-3 py-2 text-sm font-medium transition-colors text-muted-foreground hover:text-foreground" href="/projects">Projects</a>
+                            <Link className="rounded px-3 py-2 text-sm font-medium transition-colors text-muted-foreground hover:text-foreground" href="/projects">Projects</Link>
                         </li>
                         <li className="relative flex h-[60px] items-center justify-center">
-                            <a className="rounded px-3 py-2 text-sm font-medium transition-colors text-muted-foreground hover:text-foreground" href="/about">About</a>
+                            <Link className="rounded px-3 py-2 text-sm font-medium transition-colors text-muted-foreground hover:text-foreground" href="/about">About</Link>
                         </li>
                         <li className="relative flex h-[60px] items-center justify-center">
-                            <a className="rounded px-3 py-2 text-sm font-medium transition-colors text-muted-foreground hover:text-foreground" href="/contributions">Contributions</a>
+                            <Link className="rounded px-3 py-2 text-sm font-medium " href="/contributions">Contributions</Link>
                         </li>
                     </ul>
                     <div data-orientation="vertical" role="none" className="bg-border shrink-0 w-px h-6 bg-gray-500"></div>
                     <ModeToggle />
+
                     <Dialog>
                         <DialogTrigger asChild>
                             <Button variant="outline"><MdKeyboardCommandKey /></Button>
                         </DialogTrigger>
-                        <DialogContent className="sm:max-w-[425px] bg-red-700">
+                        <DialogContent className="fixed bottom-0 inset-x-0 sm:inset-auto sm:top-1/2 sm:left-1/2 sm:transform sm:-translate-x-1/2 sm:-translate-y-1/2 sm:max-w-[425px] sm:max-h-[90%] max-h-[60%] h-full overflow-y-auto sm:overflow-visible sm:rounded-lg rounded-t-lg  p-4 sm:p-6 ml-[10rem] sm:ml-0">
                             <DialogHeader className="flex flex-row items-center">
                                 <CiSearch className="mt-[.6rem]" />
                                 <input className="bg-transparent outline-none p-2" type="text" placeholder="search" />
@@ -102,9 +110,40 @@ const Navbar = () => {
                             </DialogFooter>
                         </DialogContent>
                     </Dialog>
+
+
+
+                    <button className="md:hidden ml-2" onClick={() => setMenuOpen(!menuOpen)}>
+                        {menuOpen ? <MdClose size={24} /> : <MdMenu size={24} />}
+                    </button>
                 </div>
             </div>
-        </footer>
+            {menuOpen && (
+                <div className="md:hidden rounded-lg border border-gray-400 fixed inset-x-0 top-[5rem] w-[55%] ml-[8rem] shadow-lg z-50">
+                    <ul className="flex flex-col items-start">
+                        <li className="mb-4 w-full">
+                            <Link href="/blog" className="w-full block text-sm px-4 font-medium">Blog</Link>
+                        </li>
+                        <li className="mb-4 w-full">
+                            <Link href="/guestbook" className="w-full block  text-sm font-medium  px-4 ">Guestbook</Link>
+                        </li>
+                        <li className="mb-4 w-full">
+                            <Link href="/dashboard" className="w-full block  px-4 text-sm font-medium">Dashboard</Link>
+                        </li>
+                        <li className="mb-4 w-full">
+                            <Link href="/projects" className="w-full block  text-sm font-medium px-4">Projects</Link>
+                        </li>
+                        <li className="mb-4 w-full">
+                            <Link href="/about" className="w-full block  text-sm font-medium px-4">About</Link>
+                        </li>
+                        <li className="mb-4 w-full">
+                            <Link href="/contributions" className="w-full block  text-sm font-medium px-4">Contributions</Link>
+                        </li>
+                    </ul>
+                </div>
+            )}
+        </header>
     );
 };
+
 export default Navbar;

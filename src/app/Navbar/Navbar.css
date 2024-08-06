@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-shadow {
+  @apply shadow-custom;
+}
+
+.custom-backdrop {
+  @apply backdrop-blur;
+}
+
+.custom-border {
+  @apply border border-custom;
+}
+

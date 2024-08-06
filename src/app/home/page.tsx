@@ -1,31 +1,30 @@
 'use client'
 import React from "react";
-import Image from 'next/image';
 import { useState, useEffect } from 'react';
 
-
-const HomePage = ()=>{
-    const texts = ["Facebook", "Twitter", "Amazone","Mozila","Chrome"];
-    const colors = ["#FF5733", "#33FF57", "#3357FF","aqua","yellow"];
+const HomePage = () => {
+    const texts = ["Facebook", "Twitter", "Amazon", "Mozilla", "Chrome"];
+    const colors = ["#FF5733", "#33FF57", "#3357FF", "aqua", "yellow"];
     const [currentTextIndex, setCurrentTextIndex] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentTextIndex(prevIndex => (prevIndex + 1) % texts.length);
-    }, 1000); 
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentTextIndex(prevIndex => (prevIndex + 1) % texts.length);
+        }, 1000); // Change text every 1 second
 
-    return () => clearInterval(interval); 
-  }, []);
-    return(
-        <div className="mt-[15rem] mx-[6rem] flex justify-between items-center">
-            <div className="w-[60%]">
-                <h1 className=" text-4xl font-extrabold">I&apos;m Shubham, a Backend Engineer and an open-source contributor at</h1>
-                <h1 className="text-3xl font-bold my-4" style={{ color: colors[currentTextIndex] }}>{texts[currentTextIndex]}</h1>
+        return () => clearInterval(interval); // Cleanup on unmount
+    }, []);
+
+    return (
+        <div className="flex flex-col md:flex-row justify-between items-center mx-[2rem] md:mx-[9rem] md:mt-[-15rem]">
+            <div className="flex flex-col md:items-start md:w-[50%] mb-4 md:mb-0 order-2 md:order-1">
+                <h1 className="w-full md:w-[76%] text-xl font-bold md:text-4xl md:font-extrabold">I'm Shubham, a Backend Engineer and an open-source contributor at</h1>
+                <h1 className="md:text-4xl font-bold my-4 text-xl" style={{ color: colors[currentTextIndex] }}>{texts[currentTextIndex]}</h1>
                 <p>Berlin, Germany • GMT +2</p>
             </div>
-            <div>
-            <img className="w-[12rem] rounded-full mr-[4rem]" src="../me.webp" alt="User Image" />
-          </div>
+            <div className="w-full md:w-[50%] flex  md:justify-end order-1 md:order-2">
+                <img className="w-[7rem] rounded-full" src="https://shubham-kumar.com/_next/image?url=%2Fimages%2Favatar.png&w=256&q=100" alt="User Image" width={100} height={100} />
+            </div>
         </div>
     )
 }
