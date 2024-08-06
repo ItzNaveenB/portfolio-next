@@ -61,12 +61,12 @@ const Questions = () => {
               viewBox="0 0 12 13"
               className="fill-red-500"
               stroke="white"
-              stroke-width="1"
+              strokeWidth="1"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M12 5.50676L0 0L2.83818 13L6.30623 7.86537L12 5.50676V5.50676Z"
               ></path>
             </svg>
