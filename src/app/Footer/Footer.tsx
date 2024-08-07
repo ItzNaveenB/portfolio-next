@@ -13,14 +13,14 @@ const Footer = () => {
               <SiMinutemailer /> Join Our Newsletter
             </h2>
             <p className="text-gray-600">
-            &quot;I thought the blog was good. But the newsletter? Even better!&quot;
+              &quot;I thought the blog was good. But the newsletter? Even better!&quot;
             </p>
           </div>
           <div>
             <form className="flex flex-col md:flex-row gap-4 md:items-center">
               <input
                 type="email"
-                className="border border-gray-300 px-3 py-2 rounded-md w-full md:w-auto flex-1"
+                className="border border-gray-300 px-3 py-2 rounded-md w-full md:flex-1"
                 placeholder="Your Email"
               />
               <button
@@ -30,12 +30,12 @@ const Footer = () => {
                 Try it
               </button>
             </form>
-            <p className="text-gray-600 mt-2 md:mt-0">
+            <p className="text-gray-600 mt-2">
               Join other 10 subscribers
             </p>
           </div>
         </div>
-        <div className="container mx-auto mt-8 flex flex-wrap justify-between  text-gray-600 md:ml-[5rem]">
+        <div className="container mx-auto mt-8 flex flex-wrap justify-between text-gray-600 md:ml-[5rem]">
           <div className="flex gap-24 md:gap-[14rem]">
             <div className="flex flex-col leading-8 w-full sm:w-1/2 lg:w-1/3 mb-4">
               <ul>

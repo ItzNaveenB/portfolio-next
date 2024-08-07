@@ -88,7 +88,7 @@ const About = () => {
       {/* 2nd container */}
       <div className="flex flex-col md:flex-row mt-7 gap-4">
       
-        <div className="bg-red-500 h-[17rem] md:w-1/2  shadow-md rounded-lg shadow-gray-800 p-4">
+        <div className="bg-white h-[17rem] md:w-1/2  shadow-md rounded-lg shadow-gray-800 p-4">
         <ScrollAnimation />
         <ScrollAnimationAlt />
         </div>
