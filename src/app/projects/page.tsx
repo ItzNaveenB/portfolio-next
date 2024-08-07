@@ -15,7 +15,7 @@ const Projects = () => {
           className="shadow-md rounded-lg shadow-gray-800 w-full"
           href="/xyz"
         >
-          <div className="flex flex-col items-center shadow-xl rounded-lg p-4 text-gray-500">
+          <div className="flex flex-col shadow-xl rounded-lg p-4 text-gray-500 text-left">
             <div className="w-full">
               <img
                 className="rounded-lg w-full h-auto md:h-[300px] object-cover"
@@ -23,38 +23,38 @@ const Projects = () => {
                 alt="project_image"
               />
             </div>
-            <div className="mt-4 text-center">
+            <div className="mt-4">
               <h1 className="text-xl md:text-2xl font-bold py-2">Blog</h1>
               <p className="pb-4">Share my knowledge and experience</p>
             </div>
-            <div className="flex flex-wrap justify-center gap-2">
+            <div className="flex flex-wrap gap-2">
               <button
                 type="button"
-                className="py-1 px-3 bg-slate-200 rounded-full hover:bg-gray-600 hover:text-white transition-colors duration-300"
+                className="py-1 px-2 text-sm bg-slate-200 rounded-full hover:bg-gray-600 hover:text-white transition-colors duration-300"
               >
                 TypeScript
               </button>
               <button
                 type="button"
-                className="py-1 px-3 bg-slate-200 rounded-full hover:bg-gray-600 hover:text-white transition-colors duration-300"
+                className="py-1 px-2 text-sm bg-slate-200 rounded-full hover:bg-gray-600 hover:text-white transition-colors duration-300"
               >
                 Turso
               </button>
               <button
                 type="button"
-                className="py-1 px-3 bg-slate-200 rounded-full hover:bg-gray-600 hover:text-white transition-colors duration-300"
+                className="py-1 px-2 text-sm bg-slate-200 rounded-full hover:bg-gray-600 hover:text-white transition-colors duration-300"
               >
                 Next.js
               </button>
               <button
                 type="button"
-                className="py-1 px-3 bg-slate-200 rounded-full hover:bg-gray-600 hover:text-white transition-colors duration-300"
+                className="py-1 px-2 text-sm bg-slate-200 rounded-full hover:bg-gray-600 hover:text-white transition-colors duration-300"
               >
                 Drizzle
               </button>
               <button
                 type="button"
-                className="py-1 px-3 bg-slate-200 rounded-full hover:bg-gray-600 hover:text-white transition-colors duration-300"
+                className="py-1 px-2 text-sm bg-slate-200 rounded-full hover:bg-gray-600 hover:text-white transition-colors duration-300"
               >
                 MDX
               </button>
