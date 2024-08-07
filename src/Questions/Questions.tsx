@@ -2,7 +2,7 @@ import React from 'react'
 
 const Questions = () => {
   return (
-    <div className="flex flex-col gap-6 rounded-[11px] p-4 lg:p-6">
+    <div className=" md:mx-[9rem] mt-8 flex flex-col gap-6 rounded-[11px] p-4 lg:p-6">
       <div className="flex gap-12 max-md:flex-col">
         <div className="relative size-64 max-md:mx-auto">
           <div className="overflow-hidden absolute left-1/2 top-1/2 size-20 -translate-x-1/2 -translate-y-1/2 rounded-[20px]">
@@ -88,7 +88,7 @@ const Questions = () => {
           <div className="my-8">
             <a
               href="mailto:hello@shubham-kumar.com"
-              className="rounded-full bg-email-button px-4 py-2 text-sm text-white"
+              className="rounded-full bg-email-button px-4 py-2 text-sm text-white bg-[#e74c3c]"
             >
               hello@shubham-kumar.com
             </a>

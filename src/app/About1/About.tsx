@@ -7,47 +7,17 @@ import { MdLocationOn } from "react-icons/md";
 import { RiTwitterXLine } from "react-icons/ri";
 import { FiClock } from "react-icons/fi";
 import { SiRubyonrails } from "react-icons/si";
-import { motion, useScroll, useSpring, useTransform, useMotionValue, useVelocity, useAnimationFrame } from "framer-motion";
+import ScrollAnimation from "../scrollanimation/ScrollAnimation";
+// import { motion, useScroll, useSpring, useTransform, useMotionValue, useVelocity, useAnimationFrame } from "framer-motion";
 import { wrap } from "@motionone/utils";
+
 
 interface ParallaxProps {
   children: string;
   baseVelocity: number;
 }
 
-function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
-  const baseX = useMotionValue(0);
-  const { scrollY } = useScroll();
-  const scrollVelocity = useVelocity(scrollY);
-  const smoothVelocity = useSpring(scrollVelocity, {
-    damping: 50,
-    stiffness: 400,
-  });
-  const velocityFactor = useTransform(smoothVelocity, [0, 1000], [0, 5], {
-    clamp: false,
-  });
 
-  const x = useTransform(baseX, (v) => `${wrap(-20, -45, v)}%`);
-  const directionFactor = useRef<number>(1);
-
-  useAnimationFrame((t, delta) => {
-    let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
-    directionFactor.current = velocityFactor.get() < 0 ? -1 : 1;
-    moveBy += directionFactor.current * moveBy * velocityFactor.get();
-    baseX.set(baseX.get() + moveBy);
-  });
-
-  return (
-    <div className="parallax">
-      <motion.div className="scroller" style={{ x }}>
-        <span>{children} </span>
-        <span>{children} </span>
-        <span>{children} </span>
-        <span>{children} </span>
-      </motion.div>
-    </div>
-  );
-}
 
 const About = () => {
   return (
@@ -117,18 +87,18 @@ const About = () => {
 
       {/* 2nd container */}
       <div className="flex flex-col md:flex-row mt-7 gap-4">
-        <div className="md:w-1/2 md:h-[8rem] shadow-md rounded-lg shadow-gray-800 p-4">
-          <ParallaxText baseVelocity={-5}>Framer Motion</ParallaxText>
-          <ParallaxText baseVelocity={5}>Scroll velocity</ParallaxText>
+      
+        <div className="bg-red-500 h-[17rem] md:w-1/2  shadow-md rounded-lg shadow-gray-800 p-4">
+        <ScrollAnimation />
         </div>
         <div className="flex flex-col md:flex-row gap-4 md:gap-6 md:w-1/2">
-          <div className="w-full md:w-1/2 shadow-md rounded-lg shadow-gray-800 p-4">
+          <div className="w-full max-h-[11rem] md:w-1/2 shadow-md rounded-lg shadow-gray-800 p-4">
             <span className="flex items-center gap-2">
               <FiClock /> Coding hours
             </span>
             <p className="text-center text-4xl font-extrabold mt-12">57 hrs</p>
           </div>
-          <div className="w-full md:w-1/2 shadow-md rounded-lg shadow-gray-800 p-4">
+          <div className="w-full max-h-[11rem] md:w-1/2 shadow-md rounded-lg shadow-gray-800 p-4">
             <span className="flex items-center gap-4">
               <FaRegHeart /> Fav. framework
             </span>

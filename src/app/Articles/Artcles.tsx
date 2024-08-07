@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { LuPencil } from "react-icons/lu";
+import Image from "next/image";
 
 const Articles = () => {
   return (
@@ -13,10 +14,12 @@ const Articles = () => {
           <div className="flex flex-col p-4 text-gray-500">
             <div>
               <span className="flex gap-3 items-center"><LuPencil /> Blog</span>
-              <img
+              <Image
                 className="w-full h-auto"
                 src="https://shubham-kumar.com/_next/image?url=%2Fimages%2Fblog%2Fthe-only-git-commands-you%27ll-ever-need%2Fcover.png&w=3840&q=100"
                 alt="blog_image"
+                width={200}
+                height={200}
               />
               <div className="flex justify-between mt-2">
                 <span>July 12, 2024</span>
@@ -33,10 +36,12 @@ const Articles = () => {
           <div className="flex flex-col p-4 text-gray-500">
             <div>
               <span className="flex gap-3 items-center"><LuPencil /> Blog</span>
-              <img
+              <Image
                 className="w-full h-auto"
                 src="https://shubham-kumar.com/_next/image?url=%2Fimages%2Fblog%2Fmy-open-source-journey-at-gitlab%2Fcover.png&w=3840&q=100"
                 alt="blog_image"
+                width={200}
+                height={200}
               />
               <div className="flex justify-between mt-2">
                 <span>July 12, 2024</span>
