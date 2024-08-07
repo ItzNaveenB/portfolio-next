@@ -6,7 +6,7 @@ import budweiser from './logos/budweiser.svg';
 import buzzfeed from './logos/buzzfeed.svg';
 import forbes from './logos/forbes.svg';
 import macys from './logos/macys.svg';
-import './SearchAnimation.css';
+import './SearchAnimation.css';  
 
 const ScrollAnimation = () => {
   const logos = [M3, barstoolStore, budweiser, buzzfeed, forbes, macys];
