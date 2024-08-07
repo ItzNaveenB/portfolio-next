@@ -27,8 +27,8 @@ const GuestBook = () => {
       <div className="w-full md:w-[56%] border border-gray-500 rounded mt-10 md:mt-12 p-6 mx-0 mb-4 md:mx-auto">
         <div className="flex items-center">
           <img
-            className="w-16 h-16 md:w-[6rem] md:h-[6rem] rounded-full"
-            src="https://media.istockphoto.com/id/1364917563/photo/businessman-smiling-with-arms-crossed-on-white-background.jpg?s=612x612&w=0&k=20&c=NtM9Wbs1DBiGaiowsxJY6wNCnLf0POa65rYEwnZymrM="
+            className="w-12 h-12 md:w-[6rem] md:h-[6rem] rounded-full"
+            src="/me.webp"
             alt="man_image"
           />
           <span className="ml-4 md:w-[30%]">Shubham Kumar 2024-07-01 12:40</span>
