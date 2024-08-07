@@ -51,7 +51,7 @@ const Contributions = () => {
             <div className="my-6 md:my-8 lg:my-12">
                 <a className="text-xl md:text-2xl font-bold" href="#content">Internet Archive</a>
                 <FaBuildingColumns className="text-lg md:text-xl my-2 md:my-4" />
-                <p className="my-2 md:my-4"><span className="font-bold">About:</span> The Internet Archive is "the library of the Internet", and a big supporter of Free Software.</p>
+                <p className="my-2 md:my-4"><span className="font-bold">About:</span> The Internet Archive is &quot;the library of the Internet&quot;, and a big supporter of Free Software.</p>
                 <a className="font-bold my-2 md:my-4" href="https://github.com/chatwoot/chatwoot">Repository: <span className="underline decoration-2">https://github.com/internetarchive</span></a>
                 <p className="my-2 md:my-4"><span className="font-bold">Contribution Year:</span> 2019-2021</p>
                 <div className="flex flex-col md:flex-row justify-between font-semibold">

@@ -7,7 +7,7 @@ import { MdLocationOn } from "react-icons/md";
 import { RiTwitterXLine } from "react-icons/ri";
 import { FiClock } from "react-icons/fi";
 import { SiRubyonrails } from "react-icons/si";
-import ScrollAnimation from "../scrollanimation/ScrollAnimation";
+import {ScrollAnimation,ScrollAnimationAlt} from "../scrollanimation/ScrollAnimation";
 // import { motion, useScroll, useSpring, useTransform, useMotionValue, useVelocity, useAnimationFrame } from "framer-motion";
 import { wrap } from "@motionone/utils";
 
@@ -90,6 +90,7 @@ const About = () => {
       
         <div className="bg-red-500 h-[17rem] md:w-1/2  shadow-md rounded-lg shadow-gray-800 p-4">
         <ScrollAnimation />
+        <ScrollAnimationAlt />
         </div>
         <div className="flex flex-col md:flex-row gap-4 md:gap-6 md:w-1/2">
           <div className="w-full max-h-[11rem] md:w-1/2 shadow-md rounded-lg shadow-gray-800 p-4">

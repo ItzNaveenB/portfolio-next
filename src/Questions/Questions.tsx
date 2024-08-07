@@ -82,7 +82,7 @@ const Questions = () => {
           <p className="text-zinc-800 dark:text-zinc-300">
             Feel free to reach out to me!
             <span className="text-muted-foreground">
-              I'm available for collaboration.
+              I&apos;m available for collaboration.
             </span>
           </p>
           <div className="my-8">

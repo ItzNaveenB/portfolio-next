@@ -1,55 +1,107 @@
+/* Original ScrollAnimation CSS */
 @keyframes slide {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-50%);
-    }
+  from {
+    transform: translateX(0);
   }
-  
-  .logos {
-    overflow: hidden;
-    padding: 60px 0;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+  to {
+    transform: translateX(-50%);
   }
-  
-  .logos:before,
-  .logos:after {
-    position: absolute;
-    top: 0;
-    width: 35px;
-    height: 100%;
-    content: "";
-    z-index: 2;
+}
+
+.logos {
+  overflow: hidden;
+  padding: 60px 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 35px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos:before {
+  left: 0;
+}
+
+.logos:after {
+  right: 0;
+}
+
+.logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+.logos-slide {
+  display: flex;
+  align-items: center;
+  animation: 15s slide infinite linear;
+  width: 200%;
+}
+
+.logos-slide img {
+  width: 35px;
+  margin: 0 40px;
+}
+
+/* ScrollAnimationAlt CSS */
+@keyframes slideAlt {
+  from {
+    transform: translateX(0);
   }
-  
-  .logos:before {
-    left: 0;
-    /* background: linear-gradient(to left, rgba(255, 255, 255, 0), white); */
+  to {
+    transform: translateX(50%);
   }
-  
-  .logos:after {
-    right: 0;
-    /* background: linear-gradient(to right, rgba(255, 255, 255, 0), white); */
-  }
-  
-  .logos:hover .logos-slide {
-    animation-play-state: paused;
-  }
-  
-  .logos-slide {
-    display: flex;
-    align-items: center;
-    animation: 15s slide infinite linear;
-    width: 200%;
-  }
-  
-  .logos-slide img {
-    width: 35px;
-    margin: 0 40px;
-  }
-  
+}
+
+.logos-alt {
+  overflow: hidden;
+  padding: 60px 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.logos-alt:before,
+.logos-alt:after {
+  position: absolute;
+  top: 0;
+  width: 35px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos-alt:before {
+  left: 0;
+}
+
+.logos-alt:after {
+  right: 0;
+}
+
+.logos-alt:hover .logos-slide-alt {
+  animation-play-state: paused;
+}
+
+.logos-slide-alt {
+  display: flex;
+  align-items: center;
+  animation: 15s slideAlt infinite linear;
+  width: 200%;
+}
+
+.logos-slide-alt img {
+  width: 35px;
+  margin: 0 40px;
+}

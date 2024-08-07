@@ -15,7 +15,7 @@ const GuestBook = () => {
           <TbPinned /> Pinned
         </span>
         <p className="font-semibold">
-          Hey there! Thanks for visiting my website. If you have a moment, I'd love to hear your thoughts on my work. Please log in with your account to leave a comment. Thanks!
+          Hey there! Thanks for visiting my website. If you have a moment, I&apos;d love to hear your thoughts on my work. Please log in with your account to leave a comment. Thanks!
         </p>
       </div>
       <div className="flex items-center gap-2">

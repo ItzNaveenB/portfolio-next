@@ -14,7 +14,7 @@ const ScrollAnimation = () => {
   return (
     <div className="logos">
       <div className="logos-slide">
-      {logos.map((logo, index) => (
+        {logos.map((logo, index) => (
           <Image key={index} src={logo} alt={`Logo ${index}`} />
         ))}
         {logos.map((logo, index) => (
@@ -25,4 +25,21 @@ const ScrollAnimation = () => {
   );
 };
 
-export default ScrollAnimation;
+const ScrollAnimationAlt = () => {
+  const logos = [macys, forbes, buzzfeed, budweiser, barstoolStore, M3];
+
+  return (
+    <div className="logos-alt">
+      <div className="logos-slide-alt">
+        {logos.map((logo, index) => (
+          <Image key={index} src={logo} alt={`Logo ${index}`} />
+        ))}
+        {logos.map((logo, index) => (
+          <Image key={index + logos.length} src={logo} alt={`Logo ${index}`} />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export { ScrollAnimation, ScrollAnimationAlt };
