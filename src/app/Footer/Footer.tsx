@@ -9,8 +9,8 @@ const Footer = () => {
       <footer className="py-8 rounded-2xl p-8 shadow-sm shadow-gray-900 relative z-10">
         <div className="container mx-auto flex flex-col w-full md:w-[39%] rounded-xl border border-gray-500 py-4">
           <div className="mb-4 md:mb-0">
-            <h2 className="text-gray-800 font-bold text-xl mb-2 flex items-center gap-2">
-              <SiMinutemailer /> Join Our Newsletter
+            <h2 className="text-white font-bold text-xl mb-2 flex items-center gap-2">
+              <SiMinutemailer /> Newsletter
             </h2>
             <p className="text-gray-600">
               &quot;I thought the blog was good. But the newsletter? Even better!&quot;
@@ -25,7 +25,7 @@ const Footer = () => {
               />
               <button
                 type="submit"
-                className="bg-gray-800 text-white px-4 py-2 rounded-md w-full md:w-auto"
+                className="bg-white text-black px-4 py-2 rounded-md w-full md:w-auto"
               >
                 Try it
               </button>
