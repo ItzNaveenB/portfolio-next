@@ -2,7 +2,6 @@ import React from "react";
 import { IoIosSearch } from "react-icons/io";
 import Link from "next/link";
 import { LuPencil } from "react-icons/lu";
-import Image from "next/image";
 
 const BlogPage = () => {
   return (
@@ -31,12 +30,10 @@ const BlogPage = () => {
               <span className="flex gap-3 items-center">
                 <LuPencil /> Blog
               </span>
-              <Image
-                className="w-full h-auto"
+              <img
                 src="https://shubham-kumar.com/_next/image?url=%2Fimages%2Fblog%2Fthe-only-git-commands-you%27ll-ever-need%2Fcover.png&w=3840&q=100"
                 alt="blog_image"
-                width={200}
-                height={200}
+                className="w-full mt-4 rounded-lg hover:scale-105"
               />
               <div className="flex justify-between mt-4">
                 <span>July 12, 2024</span>
@@ -44,7 +41,7 @@ const BlogPage = () => {
               </div>
               <div className="hover:ml-3 mt-4">
                 <h1 className="text-lg md:text-xl font-bold">
-                  The Git Commands You&apos;ll Ever Need
+                  The Git Commands You'll Ever Need
                 </h1>
                 <p>
                   Say goodbye to Git confusion and hello to a smoother development experience. Become a 10x developer at work.
@@ -62,7 +59,7 @@ const BlogPage = () => {
               <img
                 src="https://shubham-kumar.com/_next/image?url=%2Fimages%2Fblog%2Fmy-open-source-journey-at-gitlab%2Fcover.png&w=3840&q=100"
                 alt="blog_image"
-                className="w-full mt-4 rounded-lg"
+                className="w-full mt-4 rounded-lg hover:scale-105"
               />
               <div className="flex justify-between mt-4">
                 <span>July 12, 2024</span>

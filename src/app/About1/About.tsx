@@ -1,21 +1,14 @@
 "use client";
-import React, { useRef } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaLink, FaGithub, FaGitlab, FaYoutube, FaLinkedin, FaRegHeart, FaServicestack } from "react-icons/fa";
+import { FaLink, FaGithub, FaGitlab, FaYoutube, FaLinkedin, FaRegHeart} from "react-icons/fa";
 import { MdLocationOn } from "react-icons/md";
 import { RiTwitterXLine } from "react-icons/ri";
 import { FiClock } from "react-icons/fi";
 import { SiRubyonrails } from "react-icons/si";
-import {ScrollAnimation,ScrollAnimationAlt} from "../scrollanimation/ScrollAnimation";
-// import { motion, useScroll, useSpring, useTransform, useMotionValue, useVelocity, useAnimationFrame } from "framer-motion";
-import { wrap } from "@motionone/utils";
-
-
-interface ParallaxProps {
-  children: string;
-  baseVelocity: number;
-}
+import ScrollAnimation from "../scrollanimation/ScrollAnimation";
+import ScrollAnimation1 from "../scrollanimation/ScrollAnimation1";
 
 
 
@@ -24,26 +17,26 @@ const About = () => {
     <div className="mx-4 md:mx-[9rem]">
       <h1 className="text-center text-3xl font-bold my-5">About me</h1>
       <div className="flex flex-col md:flex-row justify-between gap-4 md:gap-3">
-        <div className="md:w-1/2 shadow-md rounded-lg shadow-gray-800">
+        <div className="h-[13rem] relative md:w-1/2 shadow-md rounded-lg shadow-gray-800 overflow-hidden md:h-[17rem]">
           <span className="flex items-center gap-4 p-4">
             <MdLocationOn /> Berlin, Germany
           </span>
           <Image
-            className="p-8 rounded-full"
+            className="absolute bottom-0 transform translate-y-1/2 p-8 rounded-full -z-10"
             src="/earth.png"
             alt="User Image"
-            // layout="responsive"
-            width={200}
-            height={200}
+            width={500}
+            height={500}
           />
         </div>
+
         <div className="md:w-1/2 shadow-md rounded-lg shadow-gray-800 text-gray-500">
-          <div className="flex gap-2 items-center text-2xl px-4 my-3 hover:text-black">
+          <div className="flex gap-2 items-center text-2xl px-4 my-5 hover:text-white">
             <FaLink />
             <span>Connect</span>
           </div>
           <Link
-            className="flex gap-2 items-center text-2xl px-6 my-3 hover:text-black"
+            className="flex gap-2 items-center text-2xl px-6 my-3 hover:text-white"
             href="/github"
             target="_blank"
             rel="noopener noreferrer"
@@ -51,7 +44,7 @@ const About = () => {
             <FaGithub /> <span>Github</span>
           </Link>
           <Link
-            className="flex gap-2 items-center text-2xl px-6 my-3 hover:text-black"
+            className="flex gap-2 items-center text-2xl px-6 my-3 hover:text-white"
             href="/gitlab"
             target="_blank"
             rel="noopener noreferrer"
@@ -59,7 +52,7 @@ const About = () => {
             <FaGitlab /> <span>Gitlab</span>
           </Link>
           <Link
-            className="flex gap-2 items-center text-2xl px-6 my-3 hover:text-black"
+            className="flex gap-2 items-center text-2xl px-6 my-3 hover:text-white"
             href="/twitter"
             target="_blank"
             rel="noopener noreferrer"
@@ -67,7 +60,7 @@ const About = () => {
             <RiTwitterXLine /> <span>X</span>
           </Link>
           <Link
-            className="flex gap-2 items-center text-2xl px-6 my-3 hover:text-black"
+            className="flex gap-2 items-center text-2xl px-6 my-3 hover:text-white"
             href="/linkedin"
             target="_blank"
             rel="noopener noreferrer"
@@ -75,7 +68,7 @@ const About = () => {
             <FaLinkedin /> <span>Linkedin</span>
           </Link>
           <Link
-            className="flex gap-2 items-center text-2xl px-6 my-3 hover:text-black"
+            className="flex gap-2 items-center text-2xl px-6 my-3 hover:text-white"
             href="/youtube"
             target="_blank"
             rel="noopener noreferrer"
@@ -87,10 +80,10 @@ const About = () => {
 
       {/* 2nd container */}
       <div className="flex flex-col md:flex-row mt-7 gap-4">
-      
-        <div className="bg-white h-[17rem] md:w-1/2  shadow-md rounded-lg shadow-gray-800 p-4">
-        <ScrollAnimation />
-        <ScrollAnimationAlt />
+
+        <div className=" h-[12rem] md:w-1/2  shadow-md rounded-lg shadow-gray-800 p-4 -z-10">
+          <ScrollAnimation />
+          <ScrollAnimation1 />
         </div>
         <div className="flex flex-col md:flex-row gap-4 md:gap-6 md:w-1/2">
           <div className="w-full max-h-[11rem] md:w-1/2 shadow-md rounded-lg shadow-gray-800 p-4">
@@ -108,7 +101,7 @@ const About = () => {
         </div>
       </div>
       <Link
-        className="flex w-full md:w-[20%] p-2 rounded-full border border-gray-400 mx-auto mt-10 justify-center items-center hover:bg-slate-200"
+        className="flex w-full md:w-[20%] p-2 rounded-full border border-gray-400 mx-auto mt-10 justify-center items-center hover:bg-slate-200 hover:text-black"
         href="/about"
       >
         Know more about me

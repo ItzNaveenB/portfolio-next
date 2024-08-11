@@ -9,6 +9,7 @@ import { FaLink, FaGithub, FaYoutube } from "react-icons/fa";
 import { FaGitlab } from "react-icons/fa6";
 import { IoCode } from "react-icons/io5";
 import { RiTwitterXLine } from "react-icons/ri";
+import { FcGoogle } from "react-icons/fc";
 import Link from "next/link";
 import './Navbar.css';
 
@@ -18,7 +19,10 @@ import {
     DialogHeader,
     DialogTrigger,
     DialogFooter,
+    DialogTitle,
+    DialogDescription,
 } from "@/components/ui/dialog";
+
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -58,7 +62,7 @@ const Navbar = () => {
                         <DialogTrigger asChild>
                             <Button variant="outline"><MdKeyboardCommandKey /></Button>
                         </DialogTrigger>
-                        <DialogContent className="fixed bottom-0 inset-x-0 sm:inset-auto sm:top-1/2 sm:left-1/2 sm:transform sm:-translate-x-1/2 sm:-translate-y-1/2 sm:max-w-[425px] sm:max-h-[90%] max-h-[60%] h-full overflow-y-auto sm:overflow-visible sm:rounded-lg rounded-t-lg  p-4 sm:p-6 ml-[10rem] sm:ml-0">
+                        <DialogContent className="md:h-[20rem] md:overflow-y-auto fixed bottom-0 inset-x-0 sm:inset-auto sm:top-1/2 sm:left-1/2 sm:transform sm:-translate-x-1/2 sm:-translate-y-1/2 sm:max-w-[425px] sm:max-h-[90%] max-h-[60%] h-full overflow-y-auto sm:overflow-visible sm:rounded-lg rounded-t-lg  p-4 sm:p-6 ml-[10rem] sm:ml-0">
                             <DialogHeader className="flex flex-row items-center">
                                 <CiSearch className="mt-[.6rem]" />
                                 <input className="bg-transparent outline-none p-2" type="text" placeholder="search" />
@@ -67,10 +71,39 @@ const Navbar = () => {
                             <div className="grid py-1">
                                 <div className="grid items-center">
                                     <span className="text-sm text-gray-500">Account</span>
-                                    <div className="flex items-center gap-2 hover:bg-gray-500 p-[.4rem] rounded mb-2">
-                                        <PiSignInBold className="text-xl" />
-                                        <span>Sign In</span>
-                                    </div>
+
+
+
+
+                                    <Dialog>
+                                        <DialogTrigger asChild>
+                                            <div className="flex items-center gap-2 hover:bg-gray-500 p-[.4rem] rounded mb-2">
+                                                <PiSignInBold className="text-xl" />
+                                                <span>Sign In</span>
+                                            </div>
+                                        </DialogTrigger>
+                                        <DialogContent className="sm:max-w-[425px] bg-blcak backdrop-blur-lg">
+                                            <DialogHeader>
+                                                <DialogTitle>Sign in</DialogTitle>
+                                                <DialogDescription className="text-gray-500">
+                                                to continue to shubham-kumar.com
+                                                </DialogDescription>
+                                            </DialogHeader>
+                                            <div className="grid gap-4 py-4">
+                                                <div className="flex items-center justify-center px-8 gap-4 bg-white text-black p-2 rounded-xl cursor-pointer">
+                                               <FaGithub className="text-2xl"/>
+                                               <span className="font-semibold">Continue with Github </span>
+                                                </div>
+                                                <div className="flex items-center justify-center px-8 gap-4  text-white p-2 rounded-xl border border-zinc-800 bg-zinc-900 cursor-pointer hover:bg-gray-600">
+                                               <FcGoogle  className="text-2xl"/>
+                                               <span className="font-semibold">Continue with Google</span>
+                                                </div>
+
+                                            </div>
+                                        </DialogContent>
+                                    </Dialog>
+
+
                                 </div>
                                 <hr />
                                 <div className="grid items-center">
@@ -105,9 +138,6 @@ const Navbar = () => {
                                     </div>
                                 </div>
                             </div>
-                            <DialogFooter>
-                                <Button type="submit">Save changes</Button>
-                            </DialogFooter>
                         </DialogContent>
                     </Dialog>
 

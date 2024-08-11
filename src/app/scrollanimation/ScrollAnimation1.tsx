@@ -1,15 +1,14 @@
 import React from "react";
 import Image from 'next/image';
-import Rubyrails from './logos/images-removebg-preview.svg';
-import postgressSql from './logos/postgresql.svg';
-import javascript from './logos/javascript.svg';
-import typescript from './logos/typescript.svg';
-import ruby from './logos/ruby-programming-language.svg';
-import golang from './logos/Go-Logo_Black.svg';
-import './SearchAnimation.css';
+import vscode from './logos/visualstudio.svg'
+import github from './logos/github.svg'
+import prism from './logos/prism.svg'
+import markdown from './logos/markdown.svg'
+import mysql from './logos/mysql.svg'
+import './SearchAnimation1.css';
 
 const ScrollAnimation = () => {
-  const logos = [javascript, typescript, postgressSql, ruby, Rubyrails, golang];
+  const logos = [vscode, github, mysql, prism, markdown];
 
   return (
     <div className="logos">

@@ -18,6 +18,7 @@ const config: Config = {
       },
     },
     extend: {
+      
       backdropFilter: {
         'none': 'none',
         'blur': 'blur(14.1px)',
@@ -33,6 +34,7 @@ const config: Config = {
         "custom-green-gradient": "linear-gradient(to right, #38ef7d, #11998e)",
         "custom-orange-gradient": "linear-gradient(to right, #f5af19, #f12711)",
         "custom-main-gradient": "linear-gradient(to right, #f7797d, #FBD786, #C6FFDD)",
+        'pinned-dark': "linear-gradient(119deg, #4b57c4, #1f85ce 30%, #7d14a6 42%, #860f3c 63%, #12082d 73%)",
       },
       backdropBlur: {
         xs: "2px",
