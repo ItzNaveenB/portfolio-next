@@ -9,6 +9,7 @@ import { FiClock } from "react-icons/fi";
 import { SiRubyonrails } from "react-icons/si";
 import ScrollAnimation from "../scrollanimation/ScrollAnimation";
 import ScrollAnimation1 from "../scrollanimation/ScrollAnimation1";
+import earthImage from './earthImage.png'
 
 
 
@@ -23,7 +24,7 @@ const About = () => {
           </span>
           <Image
             className="absolute bottom-0 transform translate-y-1/2 p-8 rounded-full -z-10"
-            src="/earth.png"
+            src={earthImage}
             alt="User Image"
             width={500}
             height={500}

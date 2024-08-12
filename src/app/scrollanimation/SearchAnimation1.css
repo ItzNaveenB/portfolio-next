@@ -15,6 +15,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  background-color: black; /* Ensure a contrasting background for visibility */
 }
 
 .logos:before,
@@ -22,9 +23,10 @@
   position: absolute;
   top: 0;
   width: 35px;
-  height: 100%;
+  height: 50%;
   content: "";
   z-index: 2;
+  background: linear-gradient(to right, transparent, black); /* For fade effect */
 }
 
 .logos:before {
@@ -35,18 +37,21 @@
   right: 0;
 }
 
-.logos:hover .logos-slide {
+.logos:hover .logos-slide,
+.logos-alt:hover .logos-slide-alt {
   animation-play-state: paused;
 }
 
-.logos-slide {
+.logos-slide,
+.logos-slide-alt {
   display: flex;
   align-items: center;
   animation: slide 15s linear infinite;
-  width: 200%;
+  width: 100%; /* Ensure it fits the container */
 }
 
-.logos-slide img {
+.logos-slide img,
+.logos-slide-alt img {
   width: 45px;
   margin: 0 15px;
 }
