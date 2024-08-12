@@ -18,7 +18,7 @@ const HomePage = () => {
     return (
         <div className="flex flex-col md:flex-row justify-between items-center mx-[2rem] md:mx-[9rem] md:mt-[-19rem] md:relative  md:-z-10">
             <div className="flex flex-col md:items-start  mb-4 md:mb-0 order-2 md:order-1">
-                <h1 className="w-full md:w-[65%]  text-xl font-bold md:text-4xl md:font-extrabold leading-8" >I'm Shubham, a Backend Engineer and an open-source contributor at</h1>
+                <h1 className="w-full md:w-[65%]  text-xl font-bold md:text-4xl md:font-extrabold leading-8" >I&apos;m Shubham, a Backend Engineer and an open-source contributor at</h1>
                 <h1 className="md:text-4xl font-bold my-4 text-xl" style={{ color: colors[currentTextIndex] }}>{texts[currentTextIndex]}</h1>
                 <p>Berlin, Germany • GMT +2</p>
             </div>

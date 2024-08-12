@@ -41,7 +41,7 @@ const BlogPage = () => {
               </div>
               <div className="hover:ml-3 mt-4">
                 <h1 className="text-lg md:text-xl font-bold">
-                  The Git Commands You'll Ever Need
+                  The Git Commands You&apos;ll Ever Need
                 </h1>
                 <p>
                   Say goodbye to Git confusion and hello to a smoother development experience. Become a 10x developer at work.
