@@ -17,36 +17,24 @@
   width: 100%;
 }
 
-.logos:before,
-.logos:after {
-  position: absolute;
-  top: 0;
-  width: 35px;
-  height: 50%;
-  content: "";
-  z-index: 2;
+.logos-slide {
+  display: flex;
+  align-items: center;
+  animation: slide 20s linear infinite;
+  width: 200%; /* Adjust based on the number of items */
 }
 
-.logos:before {
-  left: 0;
+.logo-set {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0; /* Prevent shrinking */
 }
 
-.logos:after {
-  right: 0;
+.size-10 {
+  width: 45px;
+  margin: 0 15px;
 }
 
 .logos:hover .logos-slide {
   animation-play-state: paused;
-}
-
-.logos-slide {
-  display: flex;
-  align-items: center;
-  animation: slide 15s linear infinite;
-  width: 200%;
-}
-
-.logos-slide img {
-  width: 45px;
-  margin: 0 15px;
 }

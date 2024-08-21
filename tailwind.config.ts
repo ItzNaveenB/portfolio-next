@@ -25,6 +25,9 @@ const config: Config = {
       },
       boxShadow: {
         'custom': '0 4px 30px rgba(0, 0, 0, 0.1)',
+        'feature-card': '0 -1px 3px 0 rgba(0, 0, 0, .05)',
+        'feature-card-dark': '0 0 0 1px hsla(0, 0%, 100%, .06), 0 -1px hsla(0, 0%, 100%, .1)',
+        'custom-footer': '0 1px 2px 0 rgba(0, 0, 0, .05)'
       },
       borderColor: {
         'custom': 'rgba(255, 255, 255, 0.75)',
@@ -35,6 +38,7 @@ const config: Config = {
         "custom-orange-gradient": "linear-gradient(to right, #f5af19, #f12711)",
         "custom-main-gradient": "linear-gradient(to right, #f7797d, #FBD786, #C6FFDD)",
         'pinned-dark': "linear-gradient(119deg, #4b57c4, #1f85ce 30%, #7d14a6 42%, #860f3c 63%, #12082d 73%)",
+        "custom-bg-gradient": "linear-gradient(to right, #fff, #fff)",
       },
       backdropBlur: {
         xs: "2px",

@@ -4,8 +4,12 @@
 
 @layer base {
   :root {
-    --background-color: #fff;
+    --background-color: #000; /* Black for light mode */
     --text-color: hsl(224, 71.4%, 4.1%);
+    --button-text: #fff;
+    --svg-fill: #000;
+    --dialogsvg-fill:white;
+    --dialog-background-color: #fff
     --card: hsl(0, 0%, 100%);
     --card-foreground: hsl(224, 71.4%, 4.1%);
     --popover: hsl(0, 0%, 100%);
@@ -32,8 +36,12 @@
   }
 
   .dark {
-    --background-color: hsl(0, 0%, 4%); /* Darker black */
+    --background-color: #fff; /* White for dark mode */
     --text-color: hsl(210, 20%, 98%);
+    --button-text: #000;
+    --svg-fill: white;
+    --dialogsvg-fill:black;
+    --dialog-background-color: #000;
     --card: hsl(0, 0%, 4%); /* Darker black */
     --card-foreground: hsl(210, 20%, 98%);
     --popover: hsl(0, 0%, 4%); /* Darker black */
@@ -57,10 +65,17 @@
     --chart-4: hsl(280, 65%, 60%);
     --chart-5: hsl(340, 75%, 55%);
 }
-
+.bg-theme {
+  background-color: var(--background-color);
+  color: var(--button-text);
+  transition: background-color 0.3s ease;
+}
+svg {
+  fill: var(--svg-fill);
+}
 }
 
-/* globals.css */
+
 @keyframes zoomIn {
   0% {
     transform: scale(0.98);
@@ -73,13 +88,15 @@
 }
 
 .content-wrapper {
-  opacity: 0; 
-  visibility: hidden; 
-  transform: scale(0.98); 
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.98);
+  position: relative; /* Or other positioning if needed */
+  z-index: 1;
 }
 
 .zoom-in {
-  visibility: visible; 
-  opacity: 1; 
+  visibility: visible;
+  opacity: 1;
   animation: zoomIn 1s ease-out forwards;
 }

@@ -40,19 +40,20 @@ export default function RootLayout({
         <link rel="icon" type="image/png" href="/profile1.webp" sizes="32x32" />
       </head>
       <body className={inter.className}>
-        <div className="content-wrapper">
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <Navbar />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navbar />
+          <div className="content-wrapper">
             {children}
             <Footer />
-          </ThemeProvider>
-        </div>
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );
 }
+

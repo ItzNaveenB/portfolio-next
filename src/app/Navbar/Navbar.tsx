@@ -11,6 +11,7 @@ import { IoCode } from "react-icons/io5";
 import { RiTwitterXLine } from "react-icons/ri";
 import { FcGoogle } from "react-icons/fc";
 import Link from "next/link";
+
 import './Navbar.css';
 
 import {
@@ -32,7 +33,7 @@ const Navbar = () => {
             <div className="z-0">
                 <img src="https://shubham-kumar.com/_next/image?url=%2Fimages%2Fgradient-background-top.png&w=3840&q=75" alt="top_gradient" />
             </div>
-            <div className="fixed inset-x-0 top-4 z-100 mx-auto flex h-[60px] max-w-5xl items-center justify-between rounded-2xl px-7 custom-shadow custom-backdrop custom-border">
+            <div className="fixed inset-x-0 top-4 z-50 mx-auto flex h-[60px]  items-center justify-between rounded-2xl px-7 custom-shadow custom-backdrop custom-border lg:w-[75%] xl:w-[75%] 2xl:w-[90%]">
                 <Link className="flex items-center justify-center gap-1" href="/">S</Link>
                 <div className="flex items-center gap-2">
                     <ul className="hidden md:flex gap-2">
@@ -62,7 +63,8 @@ const Navbar = () => {
                         <DialogTrigger asChild>
                             <Button variant="outline"><MdKeyboardCommandKey /></Button>
                         </DialogTrigger>
-                        <DialogContent className="md:h-[20rem] md:overflow-y-auto fixed bottom-0 inset-x-0 sm:inset-auto sm:top-1/2 sm:left-1/2 sm:transform sm:-translate-x-1/2 sm:-translate-y-1/2 sm:max-w-[425px] sm:max-h-[90%] max-h-[60%] h-full overflow-y-auto sm:overflow-visible sm:rounded-lg rounded-t-lg  p-4 sm:p-6 ml-[10rem] sm:ml-0">
+                        
+                        <DialogContent className="bg-white dark:bg-black md:h-[20rem] md:overflow-y-auto fixed bottom-0 inset-x-0 sm:inset-auto sm:top-1/2 sm:left-1/2 sm:transform sm:-translate-x-1/2 sm:-translate-y-1/2 sm:max-w-[425px] sm:max-h-[90%] max-h-[60%] h-full overflow-y-auto sm:overflow-visible sm:rounded-lg rounded-t-lg  p-4 sm:p-6 ml-[10rem] sm:ml-0">
                             <DialogHeader className="flex flex-row items-center">
                                 <CiSearch className="mt-[.6rem]" />
                                 <input className="bg-transparent outline-none p-2" type="text" placeholder="search" />
@@ -82,7 +84,7 @@ const Navbar = () => {
                                                 <span>Sign In</span>
                                             </div>
                                         </DialogTrigger>
-                                        <DialogContent className="sm:max-w-[425px] bg-blcak backdrop-blur-lg">
+                                        <DialogContent className="bg-white dark:bg-black sm:max-w-[425px]">
                                             <DialogHeader>
                                                 <DialogTitle>Sign in</DialogTitle>
                                                 <DialogDescription className="text-gray-500">
@@ -90,11 +92,11 @@ const Navbar = () => {
                                                 </DialogDescription>
                                             </DialogHeader>
                                             <div className="grid gap-4 py-4">
-                                                <div className="flex items-center justify-center px-8 gap-4 bg-white text-black p-2 rounded-xl cursor-pointer">
-                                               <FaGithub className="text-2xl"/>
+                                                <div className="flex items-center justify-center px-8 gap-4 bg-black text-white dark:bg-white dark:text-black p-2 rounded-xl cursor-pointer">
+                                               <FaGithub className="text-2xl dialogSvg"/>
                                                <span className="font-semibold">Continue with Github </span>
                                                 </div>
-                                                <div className="flex items-center justify-center px-8 gap-4  text-white p-2 rounded-xl border border-zinc-800 bg-zinc-900 cursor-pointer hover:bg-gray-600">
+                                                <div className="flex items-center justify-center px-8 gap-4   p-2 rounded-xl border border-zinc-800 dark:bg-zinc-900 cursor-pointer hover:bg-gray-600">
                                                <FcGoogle  className="text-2xl"/>
                                                <span className="font-semibold">Continue with Google</span>
                                                 </div>
@@ -139,6 +141,7 @@ const Navbar = () => {
                                 </div>
                             </div>
                         </DialogContent>
+                    
                     </Dialog>
 
 

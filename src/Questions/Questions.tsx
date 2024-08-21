@@ -2,7 +2,7 @@ import React from 'react'
 
 const Questions = () => {
   return (
-    <div className=" md:mx-[9rem] mt-8 flex flex-col gap-6 rounded-[11px] p-4 lg:p-6">
+    <div className="md:mx-[1rem] xl:mx-[13rem] lg:mx-[10rem] mt-8 flex flex-col gap-6 rounded-[11px] p-4 lg:p-6">
       <div className="flex gap-12 max-md:flex-col -z-10">
         <div className="relative size-64 max-md:mx-auto">
           <div className="overflow-hidden absolute left-1/2 top-1/2 size-20 -translate-x-1/2 -translate-y-1/2 rounded-[20px]">
@@ -19,7 +19,7 @@ const Questions = () => {
                 transition: "filter 700ms ease",
                 transform: "150ms ease",
               }}
-              src="/me.webp"
+              src="/profile1.webp"
             />
           </div>
           <div
@@ -82,7 +82,7 @@ const Questions = () => {
           <p className="text-zinc-800 dark:text-zinc-300">
             Feel free to reach out to me!
             <span className="text-muted-foreground">
-              I&apos;m available for collaboration.
+              I'm available for collaboration.
             </span>
           </p>
           <div className="my-8">

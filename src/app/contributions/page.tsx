@@ -5,12 +5,15 @@ import { RiSpeedUpFill } from "react-icons/ri";
 
 const Contributions = () => {
     return (
-        <div className="mx-4 md:mx-8 lg:mx-12 xl:mx-[9rem] mt-4 md:mt-8 lg:mt-12 xl:mt-[-20rem]">
+        <div className="md:mt-[-8rem] xl:mt-[-20rem] lg:mt-[-12rem]">
+            <div className="mx-4 xl:mx-[13rem] lg:mx-[10rem]">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">Contributions</h1>
             <p id="content" className="mt-2 md:mt-4 lg:mt-6 text-gray-500 text-base md:text-lg lg:text-xl mb-8 md:mb-12 lg:mb-16">
                 I started my open-source journey in 2019 and ever since I have been contributing to some of the biggest open-source organizations. Explore my impactful contributions as a community contributor to open-source projects, featuring some of my favorites.
             </p>
+            </div>
             <hr className="mb-6 md:mb-8 lg:mb-8" />
+            <div className="mx-4 xl:mx-[13rem] lg:mx-[10rem]">
             <div className="mb-8">
                 <img className="w-full h-auto" src="https://shubham-kumar.com/images/contributions/cover.png" alt="custom_image" />
             </div>
@@ -51,7 +54,7 @@ const Contributions = () => {
             <div className="my-6 md:my-8 lg:my-12">
                 <a className="text-xl md:text-2xl font-bold" href="#content">Internet Archive</a>
                 <FaBuildingColumns className="text-lg md:text-xl my-2 md:my-4" />
-                <p className="my-2 md:my-4"><span className="font-bold">About:</span> The Internet Archive is &quot;the library of the Internet&quot;, and a big supporter of Free Software.</p>
+                <p className="my-2 md:my-4"><span className="font-bold">About:</span> The Internet Archive is "the library of the Internet", and a big supporter of Free Software.</p>
                 <a className="font-bold my-2 md:my-4" href="https://github.com/chatwoot/chatwoot">Repository: <span className="underline decoration-2">https://github.com/internetarchive</span></a>
                 <p className="my-2 md:my-4"><span className="font-bold">Contribution Year:</span> 2019-2021</p>
                 <div className="flex flex-col md:flex-row justify-between font-semibold">
@@ -105,6 +108,7 @@ const Contributions = () => {
                     <span>mattermost-operator</span>
                     <span>2</span>
                 </div>
+            </div>
             </div>
         </div>
     );

@@ -1,0 +1,39 @@
+.text-gradient {
+    background: linear-gradient(122.25deg, rgb(132, 132, 132) 12.16%, black 70.98%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent; /* Fallback for browsers that do not support -webkit-background-clip */
+  }
+
+  .text-gradient1 {
+    background: linear-gradient(122.25deg, rgb(255, 15, 123) 12.16%, rgb(249, 69, 255) 70.98%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent; /* Fallback for browsers that do not support -webkit-background-clip */
+  }
+
+  .blogSvg svg {
+    fill: rgb(255, 15, 123);
+  }
+  
+  .gradient-text {
+    background: linear-gradient(122.25deg, rgb(255, 0, 0) 12.16%, rgb(202, 26, 26) 70.98%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* For non-webkit browsers */
+  }
+  .youtubeSvg svg{
+    fill:rgb(255, 0, 0);
+  }
+
+  .coding-text {
+    background: linear-gradient(122.25deg, rgb(0, 97, 255) 12.16%, rgb(111, 123, 247) 70.98%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* For non-webkit browsers */
+  }
+  .codingText svg{
+    fill:rgb(0, 97, 255);
+  }

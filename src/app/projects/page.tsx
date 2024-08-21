@@ -4,12 +4,15 @@ import { LuPencil } from "react-icons/lu";
 
 const Projects = () => {
     return (
-        <div className="mx-4 md:mx-[9rem] mt-10 md:mt-[-20rem]">
+        <div className="md:mt-[-8rem] xl:mt-[-20rem] lg:mt-[-12rem]">
+            <div className="mx-4 xl:mx-[13rem] lg:mx-[10rem]">
             <h1 className="text-3xl md:text-5xl font-bold">Projects</h1>
-            <p className="mt-4 text-gray-500 text-base md:text-lg mb-8 md:mb-16">The list of my projects.</p>
-            <hr />
-            <div className="flex flex-col md:flex-row gap-6 md:gap-10 mb-12 w-full md:w-[50%] mt-10 md:mt-20">
-                <Link className="shadow-md rounded-lg shadow-gray-800 w-full" href="/xyz">
+            <p className="mt-4 text-gray-500 text-base md:text-lg mb-8 md:mb-12">The list of my projects.</p>
+            </div>
+           <hr />
+            <div className="mx-4 xl:mx-[13rem] lg:mx-[10rem]">
+            <div className="flex flex-col md:flex-row gap-6 md:gap-10 mb-12 w-full md:w-[50%] mt-10 md:mt-12">
+                <Link className="shadow-feature-card dark:shadow-feature-card-dark rounded-lg  w-full" href="/xyz">
                     <div className="flex flex-col md:flex-col shadow-xl rounded-lg p-4 text-gray-500">
                         <div className="w-full">
                             <img className="rounded-lg w-full h-auto hover:scale-105" src="https://shubham-kumar.com/_next/image?url=%2Fimages%2Fprojects%2Fblog%2Fcover.png&w=3840&q=100" alt="project_image" />
@@ -29,6 +32,7 @@ const Projects = () => {
                         </div>
                     </div>
                 </Link>
+            </div>
             </div>
         </div>
     )

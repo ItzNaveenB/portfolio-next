@@ -14,3 +14,10 @@
   @apply border border-custom;
 }
 
+.dialog-content {
+  background-color: var(--dialog-background-color);
+}
+
+.dialogSvg{
+  fill:var(--dialogsvg-fill);
+}
