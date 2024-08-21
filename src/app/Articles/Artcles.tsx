@@ -23,7 +23,7 @@ const Articles = () => {
                 <span>23 likes · 167 views</span>
               </div>
               <div className="hover:ml-3 mt-2">
-                <h1 className="text-xl font-bold">The Git Commands You'll Ever Need</h1>
+                <h1 className="text-xl font-bold">The Git Commands You&apos;ll Ever Need</h1>
                 <p>Say goodbye to Git confusion and hello to a smoother development experience. Become a 10x developer at work.</p>
               </div>
             </div>
@@ -43,7 +43,7 @@ const Articles = () => {
                 <span>23 likes · 167 views</span>
               </div>
               <div className="hover:ml-3 mt-2">
-                <h1 className="text-xl font-bold">The Git Commands You'll Ever Need</h1>
+                <h1 className="text-xl font-bold">The Git Commands You&apos;ll Ever Need</h1>
                 <p>Say goodbye to Git confusion and hello to a smoother development experience. Become a 10x developer at work.</p>
               </div>
             </div>

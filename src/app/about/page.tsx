@@ -11,9 +11,9 @@ const AboutPage = () => {
             <hr className="mb-8" />
             <div className="mx-4 xl:mx-[13rem] lg:mx-[10rem]">
             <div className="mt-8 md:mt-16">
-                <p className="mb-6 md:mb-8">I'm a Backend Engineer based in Berlin, Germany, having relocated here in 2023. Originally from India, I completed my bachelor's degree in computer science & engineering in 2022. My journey into the world of software engineering began in 2019, driven by a passion for contributing to open-source projects.</p>
+                <p className="mb-6 md:mb-8">I&apos;m a Backend Engineer based in Berlin, Germany, having relocated here in 2023. Originally from India, I completed my bachelor&apos;s degree in computer science & engineering in 2022. My journey into the world of software engineering began in 2019, driven by a passion for contributing to open-source projects.</p>
                 <p className="mb-6 md:mb-8">
-                    I've had the privilege of working with prestigious organizations like <a className="font-bold text-blue-600 hover:underline" href="https://www.mozilla.org">Mozilla</a> and <a className="font-bold text-blue-600 hover:underline" href="https://gitlab.com">GitLab</a> through the <a className="font-bold text-blue-600 hover:underline" href="https://summerofcode.withgoogle.com">Google Summer of Code</a> programs. At Mozilla, I participated in the 2020 edition, and the following year, I joined GitLab, where I continued to expand my skills and knowledge.
+                    I&apos;ve had the privilege of working with prestigious organizations like <a className="font-bold text-blue-600 hover:underline" href="https://www.mozilla.org">Mozilla</a> and <a className="font-bold text-blue-600 hover:underline" href="https://gitlab.com">GitLab</a> through the <a className="font-bold text-blue-600 hover:underline" href="https://summerofcode.withgoogle.com">Google Summer of Code</a> programs. At Mozilla, I participated in the 2020 edition, and the following year, I joined GitLab, where I continued to expand my skills and knowledge.
                 </p>
                 <p className="mb-4 md:mb-6">Currently, I am a Backend Engineer at GitLab in the Tenant Scale team.</p>
                 <p className="mb-4 md:mb-6">Before joining GitLab, my open-source contributions as a community contributor:</p>
